@@ -29,6 +29,11 @@ export interface SDK {
   init: any
 }
 
+const CustomTag = z.object({
+  name: z.string(),
+  value: z.string()
+})
+
 export const AtomicAsset = z.object({
   id: z.string().optional(),
   title: z.string().min(1).max(180),
@@ -40,7 +45,8 @@ export const AtomicAsset = z.object({
   data: z.string().or(z.instanceof(Uint8Array)).optional(),
   forks: z.string().default(''),
   groupId: z.string().optional(),
-  meta: z.string().optional()
+  meta: z.string().optional(),
+  customTags: z.array(CustomTag).optional()
 })
 
 export type AtomicAssetType = z.infer<typeof AtomicAsset>

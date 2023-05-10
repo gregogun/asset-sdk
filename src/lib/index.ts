@@ -228,7 +228,8 @@ function createAssetData(asset: AtomicAssetType) {
             settings: [['isTradeable', true]]
           })
         },
-        ...topicTags
+        ...topicTags,
+        ...asset.customTags || []
       ]
     },
     meta: {
