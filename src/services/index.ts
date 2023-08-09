@@ -20,7 +20,9 @@ export default function (env: EnvironmentType) {
           { name: 'META', value: id },
           { name: 'App-Name', value: 'SmartWeaveContract' },
           { name: 'App-Version', value: '0.3.0' },
-          { name: 'Contract-Src', value: env.sources.asset }
+          { name: 'Contract-Src', value: env.sources.asset },
+          { name: 'Contract-Manifest', value: JSON.stringify({ evaluationOptions: { sourceType: 'redstone-sequencer', allowBigInt: true, internalWrites: true, unsafeClient: 'skip', useConstructor: true } }) },
+          { name: 'Indexed-By', value: 'ucm' }
         ]
         return dispatch(asset.target)
       })

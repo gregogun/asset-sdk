@@ -19,8 +19,8 @@ export const Environment = z.object({
     vouchdao: '_z0ch80z_daDUFqC9jHjfOL8nekJcok4ZRkE_UesYsk'
   }),
   sources: z.object({
-    asset: z.string().default('x0ojRwrcHBmZP20Y4SY0mgusMRx-IYTjg5W8c3UFoNs')
-  }).default({ asset: 'x0ojRwrcHBmZP20Y4SY0mgusMRx-IYTjg5W8c3UFoNs' })
+    asset: z.string().default('Of9pi--Gj7hCTawhgxOwbuWnFI1h24TTgO5pw8ENJNQ')
+  }).default({ asset: 'Of9pi--Gj7hCTawhgxOwbuWnFI1h24TTgO5pw8ENJNQ' })
 })
 
 export type EnvironmentType = z.infer<typeof Environment>
