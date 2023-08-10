@@ -1,6 +1,6 @@
 {
   "name": "test-asset-sdk",
-  "version": "0.0.32",
+  "version": "0.0.33",
   "source": "src/index.ts",
   "exports": {
     "types": "./dist/index.d.ts",
